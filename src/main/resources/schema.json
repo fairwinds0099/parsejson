@@ -1,0 +1,17 @@
+{
+  "defaults": {
+    "figures": {
+      "figureKeyOne": "defaultFigureValueOne",
+      "figureKeyTwo": "defaultFigureValueTwo",
+      "figureKeyThree": "defaultFigureValueThree",
+      "figureKeyFour": "defaultFigureValueFour",
+      "figureKeyFive": "defaultFigureValueFive"
+    }
+  },
+  "parametric": {
+    "figures": {
+      "figureKeyFour": "parametricFigureValueFour",
+      "figureKeyFive": "parametricFigureValueFive"
+    }
+  }
+}
