@@ -1,5 +1,6 @@
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import model.Figures;
 import model.Schema;
 import org.junit.Test;
 
@@ -14,16 +15,22 @@ public class Parser extends Base {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         Schema schema = objectMapper.readValue(schemaJson, Schema.class);
+
+        Figures parametricFigures = schema.getParametric().getFigures();
+
         System.out.println(
 
-
-                schema.getDefaults().getFigures().getFigureKeyFive() + "\n" +
-                        schema.getParametric().getFigures().getFigureKeyFive() + "\n"
-                        +
-                        schema.getDefaults().getFigures().getFigureKeyOne() + "\n" +
-                        schema.getParametric().getFigures().getFigureKeyOne()
-
+                "\n##############\tPRINT PARAMETRIC FIGURES\t################\n" +
+                parametricFigures.getFigureKeyOne() + "\n" +
+                        parametricFigures.getFigureKeyTwo() + "\n" +
+                        parametricFigures.getFigureKeyThree() + "\n" +
+                        parametricFigures.getFigureKeyFour() + "\n" +
+                        parametricFigures.getFigureKeyFive()
         );
+
+
+// I want to override values default values, whene they are defined as parametric.
+
 
     }
 
